@@ -1,0 +1,10 @@
+machine:
+  services:
+    - docker
+dependencies:
+  override:
+    - docker build -t nginx .
+test:
+  override:
+    - docker run -d -p 80:80 nginx; sleep 10
+    - curl -L -I http://127.0.0.1 | grep "200 OK"

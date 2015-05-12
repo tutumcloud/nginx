@@ -1,6 +1,8 @@
 tutum-docker-nginx
 ==================
 
+[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
+
 Base Docker Image to run Nginx server
 
 
@@ -37,7 +39,7 @@ In order to replace the "Hello World" application that comes bundled with this d
 
 Remember to put your configuration files under the folder named `sites-enabled` and your website files under the folder `app`. Also, if you want to use a different port, change the `EXPOSE 80` in `Dockerfile` as well.(eg. `EXPOSE 443 80` will allow connections go through port `443` and `80`).
 After that, build the new `Dockerfile`:
-    
+
     docker build -t username/my-nginx
 
 And test it:

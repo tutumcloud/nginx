@@ -1,4 +1,0 @@
-nginx:
-  image: tutum/nginx
-  ports:
-    - 80:80
